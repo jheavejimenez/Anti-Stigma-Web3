@@ -10,13 +10,14 @@ contract AntiStigmaSociety is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
+    uint256 public constant ANTI_STIGMA_FREE_COUNT = 10;
 
     constructor() ERC721("Anti-Stigma Society", "$WHOOPIE") {}
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://";
     }
-
+    
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
