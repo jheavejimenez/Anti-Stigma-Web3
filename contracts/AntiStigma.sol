@@ -5,8 +5,9 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract AntiStigmaSociety is ERC721, ERC721URIStorage, Ownable {
+contract AntiStigmaSociety is ERC721, ERC721URIStorage, ReentrancyGuard, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
@@ -17,14 +18,12 @@ contract AntiStigmaSociety is ERC721, ERC721URIStorage, Ownable {
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://";
     }
-    
-    function safeMint(address to, string memory uri) public onlyOwner {
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
-        _safeMint(to, tokenId);
-        _setTokenURI(tokenId, uri);
-    }
 
+    function earlyMint() public nonReentrant {
+        // require(mintIsActive, "Minting Anti-Stigma Society is not available yet." );
+		require(_tokenIdCounter.current() < ANTI_STIGMA_FREE_COUNT, "invalid claim");
+    }
+    
     // The following functions are overrides required by Solidity.
 
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
