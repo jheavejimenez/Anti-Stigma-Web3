@@ -23,8 +23,19 @@ const fadeOutAnimation = keyframes`
 `
 
 const GlobalStyle = createGlobalStyle`
-    * {
+    *, *::after, *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
         box-sizing: border-box;
+    }
+
+    * {
+        outline: none;
+        line-height: 1.4;
+    }
+
+    html, body {
+        font-size:16px;
     }
 
     body {
@@ -38,7 +49,19 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p, a {
-        font-size:21px;
+        font-size:1.31rem;
+    }
+    
+    h1 {
+        font-size:3rem;
+    }
+
+    h2 {
+        font-size:2.37rem;
+    }
+
+    h3 {
+        font-size:2rem;
     }
 
     a {
@@ -46,6 +69,48 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    button {
+        all:unset;
+
+        &:not(:disabled) {
+            all:unset;
+            cursor:pointer;
+        }
+
+        &.button {
+            padding:3px 20px;
+            border-radius:10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        &.button-white {
+            color:#000;
+            border-color: #fff;
+            box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
+
+            &:hover {
+                color:#fff;
+                box-shadow: 0 0 4px 0 #fff inset, 0 0 8px 1px #fff;
+            }
+        }
+
+        &.button-black {
+            color:#fff;
+            border-color: #000;
+            box-shadow: 0 0 40px 40px #000 inset, 0 0 0 0 #000;
+
+            &:hover {
+                color:#fff;
+                box-shadow: 0 0 4px 0 #fff inset, 0 0 8px 1px #fff;
+            }
+        }
+    }
+
+    a, button,
+    input[type="submit"] {
+        transition: all 300ms ease-in-out;
+    }
+    
     .open {
         visibility:visible;
         animation: .4s ${fadeInAnimation} ease-in-out;

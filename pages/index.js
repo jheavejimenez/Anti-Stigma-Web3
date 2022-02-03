@@ -1,40 +1,44 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import styled from 'styled-components'
 
-import HeroBanner from '../components/HeroBanner'
 import Container from '../components/Container'
-import Agents from '../data/data.agents.json'
 
-const IntroWrapper = styled.div`
+import LandingImage from '../public/ASS-BASE-unlit.webp'
 
-    .intro-wrapper__content {
-        max-width:800px;
-        border-top:3px solid #fff;
-        border-bottom:3px solid #fff;
+const EnterCastleWrapper = styled.div`
+    width:100%;
+    z-index:99;
+    bottom:50px;
+
+    button.button-black {
+        font-size:2rem;
+        color:#fff;
+        font-family: 'Permanent Marker', cursive;
+        border-radius:10px;
+
+        &:hover {
+            color:#fff;
+        }
     }
 `
 
-export const getStaticProps = () => {
-    return {
-        props: {
-            agents: Agents
-        }
-    }
-}
-
-const Home = ({ agents }) => {
+const Home = () => {
     return (
-        <Container>
-            <HeroBanner />
-            <IntroWrapper className='container p-4'>
-                <div className='intro-wrapper__content mx-auto text-center p-3'>
-                    <p className='mb-0'>Anti-stigma society is a NFT movement that aims to raose mental health awareness. A communitiy-driven project focused on differently-abled</p>
-                </div>
-            </IntroWrapper>
-            {/* {agents.map(agent => (
-                <h3 key={agent.id}>
-                    {agent.name}
-                </h3>
-            ))} */}
+        <Container className='position-relative'>
+            <Image
+                src={LandingImage}
+                layout="fill"
+                objectFit="cover"
+                objectPosition={'top'}
+                quality={100}
+            />
+            <EnterCastleWrapper className='position-absolute text-center'>
+                <Link href='/home'>
+                    <button className='px-4 py-2 button button-black'>Enter the castle</button>
+                </Link>
+                <h5 className='my-2'>Click this Button</h5>
+            </EnterCastleWrapper>
         </Container>
     )
 }

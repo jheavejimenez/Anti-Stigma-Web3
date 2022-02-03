@@ -3,14 +3,14 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 import LogoColored from '../public/logo-colored.png'
-import HeroBannerImage from '../public/hero-banner.png'
+import HeroBannerImage from '../public/hero-banner.webp'
 
-const Banner = styled.div`
+const Banner = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(${HeroBannerImage.src});
-    min-height:400px;
+    min-height:800px;
 
     > * {
         padding:0 15px
