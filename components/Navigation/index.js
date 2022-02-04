@@ -3,21 +3,21 @@ import styled from "styled-components";
 import NavigationWrapper from "./NavigationWrapper";
 import NavigationItem from "./NavigationItem";
 
-import AgentIcon from '../../public/navigations-icons/agent-icon.png'
-import AsFoundationIcon from '../../public/navigations-icons/AS-FOUNDATION-icon.png'
-import CareerIcon from '../../public/navigations-icons/career-icon.png'
-import CastleIcon from '../../public/navigations-icons/castle-icon.png'
-import ComicsIcon from '../../public/navigations-icons/comics-icon.png'
-import CommunityIcon from '../../public/navigations-icons/community-icon.png'
-import FaqIcon from '../../public/navigations-icons/FAQ-icon.png'
-import MintIcon from '../../public/navigations-icons/mint-icon.png'
-import NewsIcon from '../../public/navigations-icons/news-icon.png'
-import RoadMapIcon from '../../public/navigations-icons/roadmap-icon.png'
-import TeamIcon from '../../public/navigations-icons/team-icon.png'
-import TheAgencyIcon from '../../public/navigations-icons/the-agency-icon.png'
+import AgentIcon from '../../public/navigations-icons/agent-icon.webp'
+import AsFoundationIcon from '../../public/navigations-icons/AS-FOUNDATION-icon.webp'
+import CareerIcon from '../../public/navigations-icons/career-icon.webp'
+import CastleIcon from '../../public/navigations-icons/castle-icon.webp'
+import ComicsIcon from '../../public/navigations-icons/comics-icon.webp'
+import CommunityIcon from '../../public/navigations-icons/community-icon.webp'
+import FaqIcon from '../../public/navigations-icons/FAQ-icon.webp'
+import MintIcon from '../../public/navigations-icons/mint-icon.webp'
+import NewsIcon from '../../public/navigations-icons/news-icon.webp'
+import RoadMapIcon from '../../public/navigations-icons/roadmap-icon.webp'
+import TeamIcon from '../../public/navigations-icons/team-icon.webp'
+import TheAgencyIcon from '../../public/navigations-icons/the-agency-icon.webp'
 
 const NavigationIndex = styled.div`
-    bottom:-210px;
+    bottom:-230px;
     z-index:9999;
     opacity:0;
     animation-timing-function: ease-in-out;
@@ -37,22 +37,22 @@ const Navigation = ({ className }) => {
         <NavigationIndex className={`d-flex justify-content-center position-absolute w-100 ${className ? className : ''}`}>
                 <NavigationWrapper title='Anti-Stigma'>
                     <NavigationItem
-                        // icon={CastleIcon}
+                        icon={CastleIcon}
                         link='#'
                         name='Castle'
                     />
                     <NavigationItem
-                        // icon={AgentIcon}
-                        link='#'
+                        icon={AgentIcon}
+                        link='/agents'
                         name='Agents'
                     />
                     <NavigationItem
-                        // icon={RoadMapIcon}
+                        icon={RoadMapIcon}
                         link='#'
                         name='Roadmap'
                     />
                     <NavigationItem
-                        // icon={ComicsIcon}
+                        icon={ComicsIcon}
                         link='#'
                         name='Comics'
                     />
@@ -60,22 +60,22 @@ const Navigation = ({ className }) => {
 
                 <NavigationWrapper title='The Sociery'>
                     <NavigationItem
-                        // icon={CommunityIcon}
+                        icon={CommunityIcon}
                         link='#'
                         name='Community'
                     />
                     <NavigationItem
-                        // icon={TheAgencyIcon}
+                        icon={TheAgencyIcon}
                         link='#'
                         name='The A-Gen-Z'
                     />
                     <NavigationItem
-                        // icon={AsFoundationIcon}
+                        icon={AsFoundationIcon}
                         link='#'
                         name='As Foundation'
                     />
                     <NavigationItem
-                        // icon={TeamIcon}
+                        icon={TeamIcon}
                         link='#'
                         name='Team'
                     />
@@ -83,22 +83,22 @@ const Navigation = ({ className }) => {
 
                 <NavigationWrapper title='And more...'>
                     <NavigationItem
-                        // icon={MintIcon}
+                        icon={MintIcon}
                         link='#'
                         name='Mint'
                     />
                     <NavigationItem
-                        // icon={NewsIcon}
+                        icon={NewsIcon}
                         link='#'
                         name='News'
                     />
                     <NavigationItem
-                        // icon={CareerIcon}
+                        icon={CareerIcon}
                         link='#'
                         name='Career'
                     />
                     <NavigationItem
-                        // icon={FaqIcon}
+                        icon={FaqIcon}
                         link='#'
                         name='FAQ'
                     />

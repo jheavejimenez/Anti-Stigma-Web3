@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Main = styled.main`
-    // padding: 20px
+    min-height: calc(100vh - 195px);
 `;
 
 const Container = ({ children, className }) => {
