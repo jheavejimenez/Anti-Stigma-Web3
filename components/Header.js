@@ -1,13 +1,14 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import styled from 'styled-components'
 
 import Navigation from './Navigation'
 import WhiteLogo from '../public/logo-white.png'
-import MenuOff from '../public/menu-off.png'
-import MenuOn from '../public/menu-on.png'
+import MenuOff from '../public/menu-off.webp'
+import MenuOn from '../public/menu-on.webp'
 
 const HeaderContiner = styled.header`
     display: grid;
@@ -21,17 +22,20 @@ const HeaderContiner = styled.header`
         grid-area: 1 / 3 / 1 / 4;
     }
 
-    .header-container__button-wallet {
+    .header-container__button-wallet__body {
+        margin:0 0 0 auto;
         grid-area: 1 / 4 / 1 / 6;
-    }
-
-    button {
-        all:unset;
     }
 `;
 
-const Header = () => {
+
+const Header = ({ data }) => {
     const [openMenu, setOpenMenu] = useState(false)
+    const router = useRouter()
+
+    useEffect(() => {
+        setOpenMenu(false)
+    }, [router])
 
     const toggleMenu = () => {
         setOpenMenu(prevOpenMenu => !prevOpenMenu)
@@ -43,21 +47,26 @@ const Header = () => {
                 <a className='header-container__logo'>
                     <Image
                         src={WhiteLogo}
-                        width={100}
-                        height={100}
+                        width={70}
+                        height={70}
                     />
                 </a>
             </Link>
-            <button className='header-container__button text-center' onClick={toggleMenu}>
-                <Image
-                    src={openMenu ? MenuOn : MenuOff}
-                    width={60}
-                    height={60}
-                />
-            </button>
-            {/* {openMenu ? <Nav /> : ''} */}
-            <button className='header-container__button-wallet text-end'>Connect Wallet</button>
-            <Navigation className={!openMenu ? '' : 'open'}/>
+            {router.pathname !== '/' &&
+                <div className='header-container__button-menu d-flex align-items-center mx-auto'>
+                    <button className='header-container__button text-center' onClick={toggleMenu}>
+                        <Image
+                            src={openMenu ? MenuOn : MenuOff}
+                            width={50}
+                            height={50}
+                        />
+                    </button>
+                </div>
+            }
+            <div className='header-container__button-wallet__body d-flex align-items-center'>
+                <button className='button button-white text-end px-3 py-1'>Connect Wallet</button>
+            </div>
+            <Navigation className={!openMenu ? '' : 'open'} />
         </HeaderContiner>
     )
 }
