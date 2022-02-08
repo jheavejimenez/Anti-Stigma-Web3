@@ -37,6 +37,9 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
         presaleOpen = !presaleOpen;
     }
 
+    function whitelistAddress(address[] memory who, uint256 amount) public onlyOwner {
+        //TODO add whitelist logic
+    }
 
     function mint(uint256 amount) public payable nonReentrant {
         require(presaleOpen == true, 'presale is not open');
