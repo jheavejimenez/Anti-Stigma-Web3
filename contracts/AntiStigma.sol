@@ -38,14 +38,14 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     }
 
 
-    function mint() public payable nonReentrant {
+    function mint(uint256 amount) public payable nonReentrant {
         require(presaleOpen == true, 'presale is not open');
 		require(msg.value >= wlMintPrice, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
-		_minter(msg.sender);
+		_minter(msg.sender, amount);
     }
     
-    function mintForAddress(address _receiver) public onlyOwner {
-        _minter(_receiver);
+    function mintForAddress(address _receiver, uint256 amount) public onlyOwner {
+        _minter(_receiver, amount);
     }
   
     function walletOfOwner(address _owner) public view returns (uint256[] memory) {
