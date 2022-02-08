@@ -12,7 +12,8 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     Counters.Counter private supply;
 
-    bool public mintIsActive = false;
+    bool public saleOpen = false;
+    bool public presaleOpen = false;
     string public baseURI = "";
     string public baseExtension = "";
   
@@ -28,12 +29,17 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
         return supply.current();
     }
 
-    function flipMintState() public onlyOwner {
-        mintIsActive = !mintIsActive;
+    function toggleSale() public onlyOwner {
+        saleOpen = !saleOpen;
     }
 
+    function togglePresale() public onlyOwner {
+        presaleOpen = !presaleOpen;
+    }
+
+
     function mint() public payable nonReentrant {
-        require(mintIsActive, "Minting Anti-Stigma Society is not available yet." );
+        require(presaleOpen == true, 'presale is not open');
 		require(msg.value >= wlMintPrice, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
 		_minter(msg.sender);
     }
