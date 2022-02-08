@@ -83,8 +83,8 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
       require(os);
     }
     
-    function _minter(address _receiver) internal {
-        for (uint256 i = 0; i < i; i++) {
+    function _minter(address _receiver, uint256 amount) internal {
+        for (uint256 i = 0; i < amount; i++) {
             supply.increment();
             _safeMint(_receiver, supply.current());
         }
