@@ -23,6 +23,11 @@ const fadeOutAnimation = keyframes`
 `
 
 const GlobalStyle = createGlobalStyle`
+    :root {
+        --black: #000;
+        --white: #fff;
+    }
+
     *, *::after, *::before {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -39,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        color: #fff;
+        color: var(--white);
         font-family: 'Shadows Into Light', cursive;
         text-transform:uppercase;
     }
@@ -111,6 +116,12 @@ const GlobalStyle = createGlobalStyle`
         transition: all 300ms ease-in-out;
     }
     
+    .container {
+        @media (min-width: 1400px) {
+            max-width: 1140px;
+        }
+    }
+
     .open {
         visibility:visible;
         animation: .4s ${fadeInAnimation} ease-in-out;
