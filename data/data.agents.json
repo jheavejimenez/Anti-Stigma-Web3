@@ -2,9 +2,64 @@
     {
         "id": 1,
         "name": "Agent 1",
-        "agent_logo": "/public/agents/jolly-boy-logo.webp",
-        "agent_header": "/public/agents/jolly-boy-title.webp",
-        "agent_bg": "/public/agents/jolly-boy-bg.webp",
-        "link": "https://www.linkedin.com/login"
+        "agent_logo": "/agents/jolly-boy-logo.webp",
+        "agent_header": "/agents/JollyBoy-title.webp",
+        "agent_character": "/agents/jollyboy-char.webp",
+        "agent_bg": "/agents/JollyBoy-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 2,
+        "name": "Agent 2",
+        "agent_logo": "/agents/DeuceCream-logo.webp",
+        "agent_header": "/agents/DeuceCream-title.webp",
+        "agent_character": "/agents/DeuceCream-char.webp",
+        "agent_bg": "/agents/DeuceCream-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 3,
+        "name": "Agent 3",
+        "agent_logo": "/agents/PsychoApe-logo.webp",
+        "agent_header": "/agents/PsychoApe-title.webp",
+        "agent_character": "/agents/PsychoApe-char.webp",
+        "agent_bg": "/agents/PsychoApe-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 4,
+        "name": "Agent 4",
+        "agent_logo": "/agents/SadSkull-logo.webp",
+        "agent_header": "/agents/SadSkull-title.webp",
+        "agent_character": "/agents/SadSkull-char.webp",
+        "agent_bg": "/agents/SadSkull-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 5,
+        "name": "Agent 5",
+        "agent_logo": "/agents/DissGuy-logo.webp",
+        "agent_header": "/agents/DissGuy-title.webp",
+        "agent_character": "/agents/DissGuy-char.webp",
+        "agent_bg": "/agents/DissGuy-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 6,
+        "name": "Agent 6",
+        "agent_logo": "/agents/MrHowl-logo.webp",
+        "agent_header": "/agents/MrHowl-title.webp",
+        "agent_character": "/agents/MrHowl-char.webp",
+        "agent_bg": "/agents/MrHowl-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
+    },
+    {
+        "id": 7,
+        "name": "Agent 7",
+        "agent_logo": "/agents/BeepBooper-logo.webp",
+        "agent_header": "/agents/BeepBooper-title.webp",
+        "agent_character": "/agents/BeepBooper-char.webp",
+        "agent_bg": "/agents/BeepBooper-bg.webp",
+        "agent_text": "Aliquam sagittis sit amet eros ut vestibulum. Aenean convallis euismod accumsan. Duis tincidunt ante sit amet urna commodo facilisis"
     }
 ]
