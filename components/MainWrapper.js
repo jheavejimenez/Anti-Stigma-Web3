@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --black: #000;
         --white: #fff;
+        --purple: #7e4eaf;
     }
 
     *, *::after, *::before {

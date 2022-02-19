@@ -38,6 +38,7 @@ const Footer = () => {
                         <li>
                             <a href='https://opensea.io/' target="_blank">
                                 <Image
+                                    alt='Open Sea'
                                     src={OpenSeaLogo}
                                     width={38}
                                     height={38}
@@ -47,6 +48,7 @@ const Footer = () => {
                         <li>
                             <a href='https://twitter.com/?lang=en' target="_blank">
                                 <Image
+                                    alt='Twitter'
                                     src={TwitterLogo}
                                     width={38}
                                     height={38}
@@ -56,6 +58,7 @@ const Footer = () => {
                         <li>
                             <a href='https://discord.com/' target="_blank">
                                 <Image
+                                    alt='Discord'
                                     src={DiscordLogo}
                                     width={38}
                                     height={38}
@@ -65,6 +68,7 @@ const Footer = () => {
                         <li>
                             <a href='#' target="_blank">
                                 <Image
+                                    alt='Instagram'
                                     src={InstagramLogo}
                                     width={38}
                                     height={38}
@@ -74,6 +78,7 @@ const Footer = () => {
                         <li>
                             <a href='#' target="_blank">
                                 <Image
+                                    alt='Tiktok'
                                     src={TikTokLogo}
                                     width={38}
                                     height={38}

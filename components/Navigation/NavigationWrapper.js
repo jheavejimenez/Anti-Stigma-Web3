@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const NavigationContainer = styled.div`
 
     h3 {
-        background-color:#7e4eaf;
+        background-color:var(--purple);
     }
 
     .navigation-wrapper__content {

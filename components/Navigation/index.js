@@ -38,7 +38,7 @@ const Navigation = ({ className }) => {
                 <NavigationWrapper title='Anti-Stigma'>
                     <NavigationItem
                         icon={CastleIcon}
-                        link='#'
+                        // link='#'
                         name='Castle'
                     />
                     <NavigationItem
@@ -48,12 +48,12 @@ const Navigation = ({ className }) => {
                     />
                     <NavigationItem
                         icon={RoadMapIcon}
-                        link='#'
+                        link='/roadmap'
                         name='Roadmap'
                     />
                     <NavigationItem
                         icon={ComicsIcon}
-                        link='#'
+                        // link='#'
                         name='Comics'
                     />
                 </NavigationWrapper>
@@ -61,22 +61,22 @@ const Navigation = ({ className }) => {
                 <NavigationWrapper title='The Sociery'>
                     <NavigationItem
                         icon={CommunityIcon}
-                        link='#'
+                        // link='#'
                         name='Community'
                     />
                     <NavigationItem
                         icon={TheAgencyIcon}
-                        link='#'
+                        // link='#'
                         name='The A-Gen-Z'
                     />
                     <NavigationItem
                         icon={AsFoundationIcon}
-                        link='#'
+                        // link='#'
                         name='As Foundation'
                     />
                     <NavigationItem
                         icon={TeamIcon}
-                        link='#'
+                        // link='#'
                         name='Team'
                     />
                 </NavigationWrapper>
@@ -84,22 +84,22 @@ const Navigation = ({ className }) => {
                 <NavigationWrapper title='And more...'>
                     <NavigationItem
                         icon={MintIcon}
-                        link='#'
+                        // link='#'
                         name='Mint'
                     />
                     <NavigationItem
                         icon={NewsIcon}
-                        link='#'
+                        // link='#'
                         name='News'
                     />
                     <NavigationItem
                         icon={CareerIcon}
-                        link='#'
+                        // link='#'
                         name='Career'
                     />
                     <NavigationItem
                         icon={FaqIcon}
-                        link='#'
+                        // link='#'
                         name='FAQ'
                     />
                 </NavigationWrapper>

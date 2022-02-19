@@ -27,6 +27,7 @@ const Home = () => {
     return (
         <Container className='position-relative'>
             <Image
+                alt='Landing Image'
                 src={LandingImage}
                 layout="fill"
                 objectFit="cover"

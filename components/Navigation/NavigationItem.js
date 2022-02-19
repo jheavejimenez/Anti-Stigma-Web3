@@ -9,11 +9,20 @@ const MenuItem = styled.li`
     margin:0 10px;
 
     a {
-        color:#000;
+        color:var(--black);
 
         &:hover, 
         &:focus {
-            color:#7e4eaf;
+            color:var(--purple);
+        }
+    }
+
+    .no-link {
+        opacity:0.5;
+
+        &:hover, 
+        &:focus {
+            color:var(--black);
         }
     }
 
@@ -25,11 +34,28 @@ const MenuItem = styled.li`
 
 const NavigationItem = ({ icon, link, name, }) => (
     <MenuItem>
-        <Link href={link}>
-            <a className='d-flex align-items-center py-1'>
+        {link ?
+            <Link href={link}>
+                <a className='d-flex align-items-center py-1'>
+                    {icon &&
+                        <div className='menu-item__icon-wrap position-relative'>
+                            <Image className='pe-2'
+                                alt='icon'
+                                src={icon}
+                                layout='fill'
+                                objectFit="contain"
+                            />
+                        </div>
+                    }
+                    {name}
+                </a>
+            </Link>
+            :
+            <a className='d-flex align-items-center py-1 text-decoration-line-through no-link'>
                 {icon &&
-                    <div className='menu-item__icon-wrap position-relative '>
+                    <div className='menu-item__icon-wrap position-relative'>
                         <Image className='pe-2'
+                            alt='icon'
                             src={icon}
                             layout='fill'
                             objectFit="contain"
@@ -38,7 +64,7 @@ const NavigationItem = ({ icon, link, name, }) => (
                 }
                 {name}
             </a>
-        </Link>
+        }
     </MenuItem>
 );
 
