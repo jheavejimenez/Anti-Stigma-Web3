@@ -17,7 +17,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     string public baseURI = "";
     string public baseExtension = "";
   
-    uint256 public constant ANTISTIGMASOCIETY_MAX = 10000;
+    uint256 public constant ANTISTIGMASOCIETY_MAX = 8750;
     uint256 public constant MAX_MINT_TX = 10;
     uint256 public wlMintPrice = 6 ether;
     uint256 public publicMintPrice = 12 ether;
