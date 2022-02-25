@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -31,6 +32,7 @@ const HeaderContiner = styled.header`
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false)
+    const isMobile = useMediaQuery({ query: '(max-width:786px)' })
     const router = useRouter()
 
     useEffect(() => {
@@ -38,21 +40,18 @@ const Header = () => {
     }, [router])
 
     useEffect(() => {
-        if (openMenu) {
-            document.body.classList.add('overflow-hidden')
-        } else {
+        if (isMobile) {
+            if (openMenu) {
+                document.body.classList.add('overflow-hidden')
+                return
+            }
+
             document.body.classList.remove('overflow-hidden')
         }
     }, [openMenu])
 
     const toggleMenu = () => {
         setOpenMenu(prevOpenMenu => !prevOpenMenu)
-
-        // if (openMenu) {
-        //     document.body.classList.add('sample')
-        // } else {
-        //     document.body.classList.remove('sample')
-        // }
     }
 
     return (
