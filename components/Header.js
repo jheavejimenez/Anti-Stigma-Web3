@@ -29,7 +29,7 @@ const HeaderContiner = styled.header`
 `;
 
 
-const Header = ({ data }) => {
+const Header = () => {
     const [openMenu, setOpenMenu] = useState(false)
     const router = useRouter()
 
@@ -37,8 +37,22 @@ const Header = ({ data }) => {
         setOpenMenu(false)
     }, [router])
 
+    useEffect(() => {
+        if (openMenu) {
+            document.body.classList.add('overflow-hidden')
+        } else {
+            document.body.classList.remove('overflow-hidden')
+        }
+    }, [openMenu])
+
     const toggleMenu = () => {
         setOpenMenu(prevOpenMenu => !prevOpenMenu)
+
+        // if (openMenu) {
+        //     document.body.classList.add('sample')
+        // } else {
+        //     document.body.classList.remove('sample')
+        // }
     }
 
     return (

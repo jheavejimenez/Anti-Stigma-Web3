@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const NavigationContainer = styled.div`
-
     h3 {
         background-color:var(--purple);
     }

@@ -48,6 +48,28 @@ const GlobalStyle = createGlobalStyle`
         color: var(--white);
         font-family: 'Shadows Into Light', cursive;
         text-transform:uppercase;
+
+        &.overflow-hidden {
+            header.container {
+
+                @media (max-width:768px) {
+                    position:inherit!important;
+                }
+
+                .header-container__button-menu {
+                    z-index:9;
+                }
+            }
+
+            &:after {
+                position:absolute;
+                background:rgba(0, 0, 0, 0.6);
+                width:100%;
+                height:100%;
+                content:"";
+                top:0;
+            }
+        }
     }
 
     h1, h2, h3 {
