@@ -35,74 +35,74 @@ const NavigationIndex = styled.div`
 const Navigation = ({ className }) => {
     return (
         <NavigationIndex className={`d-flex justify-content-center position-absolute w-100 ${className ? className : ''}`}>
-                <NavigationWrapper title='Anti-Stigma'>
-                    <NavigationItem
-                        icon={CastleIcon}
-                        // link='#'
-                        name='Castle'
-                    />
-                    <NavigationItem
-                        icon={AgentIcon}
-                        link='/agents'
-                        name='Agents'
-                    />
-                    <NavigationItem
-                        icon={RoadMapIcon}
-                        link='/roadmap'
-                        name='Roadmap'
-                    />
-                    <NavigationItem
-                        icon={ComicsIcon}
-                        // link='#'
-                        name='Comics'
-                    />
-                </NavigationWrapper>
+            <NavigationWrapper title='Anti-Stigma'>
+                <NavigationItem
+                    icon={CastleIcon}
+                    // link='#'
+                    name='Castle'
+                />
+                <NavigationItem
+                    icon={AgentIcon}
+                    link='/agents'
+                    name='Agents'
+                />
+                <NavigationItem
+                    icon={RoadMapIcon}
+                    link='/roadmap'
+                    name='Roadmap'
+                />
+                <NavigationItem
+                    icon={ComicsIcon}
+                    // link='#'
+                    name='Comics'
+                />
+            </NavigationWrapper>
 
-                <NavigationWrapper title='The Sociery'>
-                    <NavigationItem
-                        icon={CommunityIcon}
-                        // link='#'
-                        name='Community'
-                    />
-                    <NavigationItem
-                        icon={TheAgencyIcon}
-                        // link='#'
-                        name='The A-Gen-Z'
-                    />
-                    <NavigationItem
-                        icon={AsFoundationIcon}
-                        // link='#'
-                        name='As Foundation'
-                    />
-                    <NavigationItem
-                        icon={TeamIcon}
-                        // link='#'
-                        name='Team'
-                    />
-                </NavigationWrapper>
+            <NavigationWrapper title='The Sociery'>
+                <NavigationItem
+                    icon={CommunityIcon}
+                    // link='#'
+                    name='Community'
+                />
+                <NavigationItem
+                    icon={TheAgencyIcon}
+                    // link='#'
+                    name='The A-Gen-Z'
+                />
+                <NavigationItem
+                    icon={AsFoundationIcon}
+                    // link='#'
+                    name='As Foundation'
+                />
+                <NavigationItem
+                    icon={TeamIcon}
+                    // link='#'
+                    name='Team'
+                />
+            </NavigationWrapper>
 
-                <NavigationWrapper title='And more...'>
-                    <NavigationItem
-                        icon={MintIcon}
-                        // link='#'
-                        name='Mint'
-                    />
-                    <NavigationItem
-                        icon={NewsIcon}
-                        // link='#'
-                        name='News'
-                    />
-                    <NavigationItem
-                        icon={CareerIcon}
-                        // link='#'
-                        name='Career'
-                    />
-                    <NavigationItem
-                        icon={FaqIcon}
-                        // link='#'
-                        name='FAQ'
-                    />
-                </NavigationWrapper>
+            <NavigationWrapper title='And more...'>
+                <NavigationItem
+                    icon={MintIcon}
+                    // link='#'
+                    name='Mint'
+                />
+                <NavigationItem
+                    icon={NewsIcon}
+                    // link='#'
+                    name='News'
+                />
+                <NavigationItem
+                    icon={CareerIcon}
+                    // link='#'
+                    name='Career'
+                />
+                <NavigationItem
+                    icon={FaqIcon}
+                    // link='#'
+                    name='FAQ'
+                />
+            </NavigationWrapper>
         </NavigationIndex>
     );
 };

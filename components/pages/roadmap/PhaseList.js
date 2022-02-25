@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
-const Content = styled.div``
+import TextContainer from '../../TextContainer'
+
+const Content = styled.div`
+`
 
 const Circle = styled.div`
     border-radius:100%;
@@ -17,10 +20,12 @@ const Circle = styled.div`
 function PhaseList({ children, list, color }) {
     return (
         <Content className="d-flex align-items-center">
-            <Circle color={color} className="d-flex justify-content-center align-items-center">
+            <Circle color={color} className="d-flex justify-content-center align-items-center me-4">
                 <h4 className="m-0">{list}</h4>
             </Circle>
-            {children}
+            <TextContainer inBg={true}>
+                {children}
+            </TextContainer>
         </Content>
     )
 }
