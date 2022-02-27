@@ -14,16 +14,18 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     bool public saleOpen = false;
     bool public presaleOpen = false;
+    bool public reveal = false; // reveal is true when presale is over and sale is open 
+
     string public baseURI = "";
     string public baseExtension = "";
   
-    uint256 public constant ANTISTIGMASOCIETY_MAX = 10000;
+    uint256 public constant ANTISTIGMASOCIETY_MAX = 8750;
     uint256 public constant MAX_MINT_TX = 10;
     uint256 public wlMintPrice = 6 ether;
     uint256 public publicMintPrice = 12 ether;
 
 
-    constructor() ERC721("Anti-Stigma Society", "AntiStigmaSociety") {}
+    constructor() ERC721("Anti-Stigma Society - Alpha Class", "AntiStigmaSociety") {}
 
     function totalSupply() public view returns (uint256) {
         return supply.current();
@@ -35,6 +37,10 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     function togglePresale() public onlyOwner {
         presaleOpen = !presaleOpen;
+    }
+
+    function toggleReveal() public onlyOwner {
+        reveal = true;
     }
 
     function whitelistAddress(address[] memory who, uint256 amount) public onlyOwner {
