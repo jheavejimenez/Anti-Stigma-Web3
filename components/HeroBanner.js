@@ -30,7 +30,7 @@ const Banner = styled.section`
             position:absolute;
             width:100%;
             height:15px;
-            background-color:#7e4eaf;
+            background-color:var(--purple);
             left:0;
             bottom:0;
         }
@@ -42,7 +42,7 @@ function HeroBanner() {
         <Banner className='w-100 d-flex align-items-center'>
             <div className='d-flex justify-content-between align-items-center container'>
                 <Image
-                    alt='LogoColored'
+                    alt='Colored Logo'
                     src={LogoColored}
                     width={350}
                     height={350}

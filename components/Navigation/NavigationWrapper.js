@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const NavigationContainer = styled.div`
-
     h3 {
-        background-color:#7e4eaf;
+        background-color:var(--purple);
+        font-size:clamp(24px, 3vw, 32px);
     }
 
     .navigation-wrapper__content {

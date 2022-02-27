@@ -41,7 +41,7 @@ const HomeInside = () => {
                     <div className='agents-wrapper__block col-8 order-md-first'>
                         <div className='agents-wrapper__content-text p-4 mb-3 rounded-3'>
                             <h2>Agents</h2>
-                            <p>The project will have 10,000 unique characters called "Agents" both code-generated and custome-made for monthly holiday drops and special collaborations.</p>
+                            <p>The project will have 10,000 unique characters called &quot;Agents&quot; both code-generated and custome-made for monthly holiday drops and special collaborations.</p>
                         </div>
                         <button className='button button-white agents-wrapper__button'>More Info</button>
                     </div>

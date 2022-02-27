@@ -17,16 +17,29 @@ import TeamIcon from '../../public/navigations-icons/team-icon.webp'
 import TheAgencyIcon from '../../public/navigations-icons/the-agency-icon.webp'
 
 const NavigationIndex = styled.div`
-    bottom:-230px;
+    top:90px;
+    left:0;
     z-index:9999;
     opacity:0;
     animation-timing-function: ease-in-out;
-
     visibility:hidden;
+    overflow:auto;
+    height:80vh;
+
+    @media (min-width:786px) {
+        bottom:-230px;
+        height:auto;
+    }
 
     > * {
         width:100%;
-        max-width:300px;
+        margin:0 auto;
+        max-width:80vw;
+        
+        @media (min-width:786px) {
+            max-width:300px;
+            margin:inherit;
+        }
 
         box-shadow: 0px 4px 11px 0px rgb(50 50 50 / 60%);
     }
@@ -34,75 +47,75 @@ const NavigationIndex = styled.div`
 
 const Navigation = ({ className }) => {
     return (
-        <NavigationIndex className={`d-flex justify-content-center position-absolute w-100 ${className ? className : ''}`}>
-                <NavigationWrapper title='Anti-Stigma'>
-                    <NavigationItem
-                        icon={CastleIcon}
-                        link='#'
-                        name='Castle'
-                    />
-                    <NavigationItem
-                        icon={AgentIcon}
-                        link='/agents'
-                        name='Agents'
-                    />
-                    <NavigationItem
-                        icon={RoadMapIcon}
-                        link='#'
-                        name='Roadmap'
-                    />
-                    <NavigationItem
-                        icon={ComicsIcon}
-                        link='#'
-                        name='Comics'
-                    />
-                </NavigationWrapper>
+        <NavigationIndex className={`navigation-index d-md-flex justify-content-center position-absolute w-100 ${className ? className : ''}`}>
+            <NavigationWrapper title='Anti-Stigma'>
+                <NavigationItem
+                    icon={CastleIcon}
+                    link='/home'
+                    name='Castle'
+                />
+                <NavigationItem
+                    icon={AgentIcon}
+                    link='/agents'
+                    name='Agents'
+                />
+                <NavigationItem
+                    icon={RoadMapIcon}
+                    link='/roadmap'
+                    name='Roadmap'
+                />
+                <NavigationItem
+                    icon={ComicsIcon}
+                    // link='#'
+                    name='Comics'
+                />
+            </NavigationWrapper>
 
-                <NavigationWrapper title='The Sociery'>
-                    <NavigationItem
-                        icon={CommunityIcon}
-                        link='#'
-                        name='Community'
-                    />
-                    <NavigationItem
-                        icon={TheAgencyIcon}
-                        link='#'
-                        name='The A-Gen-Z'
-                    />
-                    <NavigationItem
-                        icon={AsFoundationIcon}
-                        link='#'
-                        name='As Foundation'
-                    />
-                    <NavigationItem
-                        icon={TeamIcon}
-                        link='#'
-                        name='Team'
-                    />
-                </NavigationWrapper>
+            <NavigationWrapper title='The Sociery'>
+                <NavigationItem
+                    icon={CommunityIcon}
+                    // link='#'
+                    name='Community'
+                />
+                <NavigationItem
+                    icon={TheAgencyIcon}
+                    // link='#'
+                    name='The A-Gen-Z'
+                />
+                <NavigationItem
+                    icon={AsFoundationIcon}
+                    // link='#'
+                    name='As Foundation'
+                />
+                <NavigationItem
+                    icon={TeamIcon}
+                    // link='#'
+                    name='Team'
+                />
+            </NavigationWrapper>
 
-                <NavigationWrapper title='And more...'>
-                    <NavigationItem
-                        icon={MintIcon}
-                        link='#'
-                        name='Mint'
-                    />
-                    <NavigationItem
-                        icon={NewsIcon}
-                        link='#'
-                        name='News'
-                    />
-                    <NavigationItem
-                        icon={CareerIcon}
-                        link='#'
-                        name='Career'
-                    />
-                    <NavigationItem
-                        icon={FaqIcon}
-                        link='#'
-                        name='FAQ'
-                    />
-                </NavigationWrapper>
+            <NavigationWrapper title='And more...'>
+                <NavigationItem
+                    icon={MintIcon}
+                    // link='#'
+                    name='Mint'
+                />
+                <NavigationItem
+                    icon={NewsIcon}
+                    // link='#'
+                    name='News'
+                />
+                <NavigationItem
+                    icon={CareerIcon}
+                    // link='#'
+                    name='Career'
+                />
+                <NavigationItem
+                    icon={FaqIcon}
+                    // link='#'
+                    name='FAQ'
+                />
+            </NavigationWrapper>
         </NavigationIndex>
     );
 };
