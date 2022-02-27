@@ -110,6 +110,7 @@ const Agents = ({ agents }) => {
                 </TextContainer>
                 <div className='text-center pb-5'>
                     <Image
+                        alt='Art Update Background'
                         alt='Art Rarity'
                         src={ArtRarity}
                         width={700}
