@@ -42,6 +42,7 @@ function HeroBanner() {
         <Banner className='w-100 d-flex align-items-center'>
             <div className='d-flex justify-content-between align-items-center container'>
                 <Image
+                    alt='LogoColored'
                     src={LogoColored}
                     width={350}
                     height={350}

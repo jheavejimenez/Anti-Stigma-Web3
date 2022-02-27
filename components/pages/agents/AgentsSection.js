@@ -34,6 +34,7 @@ const AgentsSection = ({ headerBg, smIcon, background, charImg, text, right, }) 
     return (
         <AgentList className='position-relative'>
             <Image
+                alt='headerBg'
                 src={background}
                 layout="fill"
                 objectFit="cover"
@@ -42,6 +43,7 @@ const AgentsSection = ({ headerBg, smIcon, background, charImg, text, right, }) 
             <article className={`d-flex container ${right ? 'justify-content-end section-end' : 'section-start'}`}>
                 <div className='agent-list__logo-icon'>
                     <Image
+                        alt='smIcon'
                         src={smIcon}
                         width={80}
                         height={80}
@@ -49,6 +51,7 @@ const AgentsSection = ({ headerBg, smIcon, background, charImg, text, right, }) 
                 </div>
                 <div className={`col-md-7 d-flex ${!right ? 'order-2' : ''}`}>
                     <Image
+                        alt='charImg'
                         src={charImg}
                         width={710}
                         height={400}
@@ -57,6 +60,7 @@ const AgentsSection = ({ headerBg, smIcon, background, charImg, text, right, }) 
                 <div className='agent-list__content col-md-5 py-3'>
                     <div className='text-center mb-3'>
                         <Image
+                            alt='headerBg'
                             src={headerBg}
                             width={300}
                             height={150}

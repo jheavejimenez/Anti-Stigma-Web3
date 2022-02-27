@@ -30,6 +30,7 @@ const NavigationItem = ({ icon, link, name, }) => (
                 {icon &&
                     <div className='menu-item__icon-wrap position-relative '>
                         <Image className='pe-2'
+                            alt={name}
                             src={icon}
                             layout='fill'
                             objectFit="contain"

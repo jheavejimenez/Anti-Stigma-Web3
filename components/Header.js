@@ -46,6 +46,7 @@ const Header = ({ data }) => {
             <Link href='/'>
                 <a className='header-container__logo'>
                     <Image
+                        alt='WhiteLogo'
                         src={WhiteLogo}
                         width={70}
                         height={70}
@@ -56,6 +57,7 @@ const Header = ({ data }) => {
                 <div className='header-container__button-menu d-flex align-items-center mx-auto'>
                     <button className='header-container__button text-center' onClick={toggleMenu}>
                         <Image
+                            alt='Menu'
                             src={openMenu ? MenuOn : MenuOff}
                             width={50}
                             height={50}
