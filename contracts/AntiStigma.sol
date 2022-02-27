@@ -41,7 +41,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     function toggleReveal() public onlyOwner {
         reveal = true;
-    }
+            }
 
     function whitelistAddress(address[] memory who, uint256 amount) public onlyOwner {
         //TODO add whitelist logic
