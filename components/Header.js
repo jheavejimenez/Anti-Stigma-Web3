@@ -13,19 +13,39 @@ import MenuOn from '../public/menu-on.webp'
 
 const HeaderContiner = styled.header`
     display: grid;
+    // grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);
+
+    @media (min-width:768px) {
+        grid-template-rows: repeat(1, 1fr);
+    }
     
     .header-container__logo {
-        grid-area: 1 / 1 / 1 / 3; 
+        grid-area: 1 / 1 / 1 / 1;
+
+        @media (min-width:768px) {
+            grid-area: 1 / 1 / 1 / 3;
+        }
     }
 
-    .header-container__button {
-        grid-area: 1 / 3 / 1 / 4;
+    .header-container__button-menu {
+        margin:0 0 0 auto;
+        grid-area: 1 / 5 / 1 / 5;
+
+        @media (min-width:768px) {
+            // margin:0 auto;
+            grid-area: 1 / 3 / 1 / 4;
+        }
     }
 
     .header-container__button-wallet__body {
-        margin:0 0 0 auto;
-        grid-area: 1 / 4 / 1 / 6;
+        margin:0 auto;
+        grid-area: 2 / 2 / 2 / 5;
+        
+        @media (min-width:768px) {
+            margin:0 0 0 auto;
+            grid-area: 1 / 4 / 1 / 6;
+        }
     }
 `;
 
@@ -67,7 +87,7 @@ const Header = () => {
                 </a>
             </Link>
             {router.pathname !== '/' &&
-                <div className='header-container__button-menu d-flex align-items-center mx-auto'>
+                <div className='header-container__button-menu d-flex align-items-center mx-md-auto'>
                     <button className='header-container__button text-center' onClick={toggleMenu}>
                         <Image
                             alt='Menu Icon'

@@ -7,7 +7,7 @@ const PhaseListImage = ({ className, src, width, height, alt }) => {
                 alt={alt}
                 src={src}
                 width={width ? width : '300'}
-                height={height ? height : '200'}
+                height={height ? height : '300'}
             />
         </div>
     )

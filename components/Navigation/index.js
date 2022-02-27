@@ -51,7 +51,7 @@ const Navigation = ({ className }) => {
             <NavigationWrapper title='Anti-Stigma'>
                 <NavigationItem
                     icon={CastleIcon}
-                    // link='#'
+                    link='/home'
                     name='Castle'
                 />
                 <NavigationItem
