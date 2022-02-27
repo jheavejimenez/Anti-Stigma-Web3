@@ -36,9 +36,9 @@ const Footer = () => {
                 <nav>
                     <ul className='d-flex'>
                         <li>
-                            <a href='https://opensea.io/' target="_blank" rel="noreferrer">
+                            <a href='https://opensea.io/' target="_blank" rel="noopener">
                                 <Image
-                                    alt='OpenSeaLogo'
+                                    alt='Open Sea'
                                     src={OpenSeaLogo}
                                     width={38}
                                     height={38}
@@ -46,9 +46,9 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='https://twitter.com/?lang=en' target="_blank" rel="noreferrer">
+                            <a href='https://twitter.com/?lang=en' target="_blank" rel="noopener">
                                 <Image
-                                    alt='TwitterLogo'
+                                    alt='Twitter'
                                     src={TwitterLogo}
                                     width={38}
                                     height={38}
@@ -56,9 +56,9 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='https://discord.com/' target="_blank" rel="noreferrer">
+                            <a href='https://discord.com/' target="_blank" rel="noopener">
                                 <Image
-                                    alt='DiscordLogo'
+                                    alt='Discord'
                                     src={DiscordLogo}
                                     width={38}
                                     height={38}
@@ -66,9 +66,9 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='#' target="_blank" rel="noreferrer">
+                            <a href='#' target="_blank" rel="noopener">
                                 <Image
-                                    alt='InstagramLogo'
+                                    alt='Instagram'
                                     src={InstagramLogo}
                                     width={38}
                                     height={38}
@@ -76,9 +76,9 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='#' target="_blank" rel="noreferrer">
+                            <a href='#' target="_blank" rel="noopener">
                                 <Image
-                                    alt='TikTokLogo'
+                                    alt='Tiktok'
                                     src={TikTokLogo}
                                     width={38}
                                     height={38}

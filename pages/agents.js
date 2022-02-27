@@ -46,12 +46,12 @@ const Agents = ({ agents }) => {
                     </TextContainer>
                 </div>
                 <div className='col-md-5'>
-                        <Image
-                            alt='Art Update Background'
-                            src={GoldenApple}
-                            width={600}
-                            height={600}
-                        />
+                    <Image
+                        alt='Golden Apple'
+                        src={GoldenApple}
+                        width={600}
+                        height={600}
+                    />
                 </div>
             </div>
 
@@ -91,7 +91,7 @@ const Agents = ({ agents }) => {
                     </div>
                     <div className='d-flex justify-content-center col-md-6'>
                         <Image
-                            alt='Art Update Background'
+                            alt='Golden Apple'
                             src={GoldenApple}
                             width={600}
                             height={600}
@@ -110,7 +110,6 @@ const Agents = ({ agents }) => {
                 </TextContainer>
                 <div className='text-center pb-5'>
                     <Image
-                        alt='Art Update Background'
                         alt='Art Rarity'
                         src={ArtRarity}
                         width={700}
