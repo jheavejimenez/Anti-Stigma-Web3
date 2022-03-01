@@ -36,7 +36,7 @@ const Footer = () => {
                 <nav>
                     <ul className='d-flex'>
                         <li>
-                            <a href='https://opensea.io/' target="_blank" rel="noopener">
+                            <a href='https://opensea.io/' rel="noopener noreferrer">
                                 <Image
                                     alt='Open Sea'
                                     src={OpenSeaLogo}
@@ -46,7 +46,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='https://twitter.com/?lang=en' target="_blank" rel="noopener">
+                            <a href='https://twitter.com/?lang=en' rel="noopener noreferrer">
                                 <Image
                                     alt='Twitter'
                                     src={TwitterLogo}
@@ -56,7 +56,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='https://discord.com/' target="_blank" rel="noopener">
+                            <a href='https://discord.com/' rel="noopener noreferrer">
                                 <Image
                                     alt='Discord'
                                     src={DiscordLogo}
@@ -66,7 +66,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='#' target="_blank" rel="noopener">
+                            <a href='#' rel="noopener noreferrer">
                                 <Image
                                     alt='Instagram'
                                     src={InstagramLogo}
@@ -76,7 +76,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href='#' target="_blank" rel="noopener">
+                            <a href='#' rel="noopener noreferrer">
                                 <Image
                                     alt='Tiktok'
                                     src={TikTokLogo}
