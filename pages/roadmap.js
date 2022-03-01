@@ -34,6 +34,7 @@ const Roadmap = () => {
             <Content>
                 <div className="d-flex justify-content-center align-items-center">
                     <Image
+                        alt='Roadmap Image'
                         src={RoadmapImage}
                         width={230}
                         height={230}
