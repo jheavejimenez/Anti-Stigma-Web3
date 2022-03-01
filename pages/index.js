@@ -35,7 +35,7 @@ const Home = () => {
                 quality={100}
             />
             <EnterCastleWrapper className='position-absolute text-center'>
-                <Link href='/home'>
+                <Link href='/home' passHref>
                     <button className='px-4 py-2 button button-black'>Enter the castle</button>
                 </Link>
                 <h5 className='my-2'>Click this Button</h5>
