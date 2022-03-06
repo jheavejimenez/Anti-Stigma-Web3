@@ -1,4 +1,6 @@
 import Image from 'next/image'
+
+import { NextSeo } from 'next-seo';
 import styled from 'styled-components'
 
 import Container from '../components/Container'
@@ -27,174 +29,180 @@ const Content = styled.div`
 
 const Roadmap = () => {
     return (
-        <Container>
-            <Content>
-                <div className="d-flex justify-content-center align-items-center">
-                    <Image
-                        alt='Roadmap Image'
-                        src={RoadmapImage}
-                        width={230}
-                        height={230}
-                    />
-                </div>
+        <>
+            <NextSeo
+                title="Agents"
+            />
 
-                <PhaseSection title='Phase 1' color='7FAE98'>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                            <PhaseList list='0%' color='7FAE98'>
-                                <ul className='ps-3'>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Quaerat nulla nemo molestias libero!</li>
-                                    <li>Aspernatur repellat debitis odit impedit!</li>
-                                    <li>Expedita facilis inventore ab et.</li>
-                                </ul>
-                            </PhaseList>
-                        </div>
-                        <PhaseListImage
-                            alt='Zero Percent Image'
-                            src={zeroPercentImg}
+            <Container>
+                <Content>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <Image
+                            alt='Roadmap Image'
+                            src={RoadmapImage}
+                            width={230}
+                            height={230}
                         />
                     </div>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                            <PhaseList list='10%' color='7FAE98'>
-                                <ul className='ps-3'>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Fugiat aliquam dolorum harum architecto?</li>
-                                    <li>Vitae quia obcaecati fugit eum?</li>
-                                    <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
-                                </ul>
-                            </PhaseList>
-                        </div>
-                        <PhaseListImage
-                            alt='Ten Percent Image'
-                            src={tenPercentImg}
-                            width={240}
-                            height={240}
-                        />
-                    </div>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                            <PhaseList list='20%' color='7FAE98'>
-                                <ul className='ps-3'>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Expedita vel fugiat quae aspernatur?</li>
-                                </ul>
-                            </PhaseList>
-                        </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={twentyPercentImg}
-                        />
-                    </div>
-                </PhaseSection>
 
-                <PhaseSection title='Phase 2' color='32EDF0'>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='40%' color='32EDF0'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Quaerat nulla nemo molestias libero!</li>
-                                <li>Aspernatur repellat debitis odit impedit!</li>
-                                <li>Expedita facilis inventore ab et.</li>
-                            </ul>
-                        </PhaseList>
+                    <PhaseSection title='Phase 1' color='7FAE98'>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='0%' color='7FAE98'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Quaerat nulla nemo molestias libero!</li>
+                                        <li>Aspernatur repellat debitis odit impedit!</li>
+                                        <li>Expedita facilis inventore ab et.</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Zero Percent Image'
+                                src={zeroPercentImg}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={fortyPercentImg}
-                        />
-                    </div>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='50%' color='32EDF0'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Fugiat aliquam dolorum harum architecto?</li>
-                                <li>Vitae quia obcaecati fugit eum?</li>
-                                <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
-                            </ul>
-                        </PhaseList>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='10%' color='7FAE98'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Fugiat aliquam dolorum harum architecto?</li>
+                                        <li>Vitae quia obcaecati fugit eum?</li>
+                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Ten Percent Image'
+                                src={tenPercentImg}
+                                width={240}
+                                height={240}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={fiftyPercentImg}
-                        />
-                    </div>
-                </PhaseSection>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='20%' color='7FAE98'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Expedita vel fugiat quae aspernatur?</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={twentyPercentImg}
+                            />
+                        </div>
+                    </PhaseSection>
 
-                <PhaseSection title='Phase 3' color='7CA3F3'>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='70%' color='7CA3F3'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Quaerat nulla nemo molestias libero!</li>
-                                <li>Aspernatur repellat debitis odit impedit!</li>
-                                <li>Expedita facilis inventore ab et.</li>
-                            </ul>
-                        </PhaseList>
+                    <PhaseSection title='Phase 2' color='32EDF0'>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='40%' color='32EDF0'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Quaerat nulla nemo molestias libero!</li>
+                                        <li>Aspernatur repellat debitis odit impedit!</li>
+                                        <li>Expedita facilis inventore ab et.</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={fortyPercentImg}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={seventyPercentImg}
-                        />
-                    </div>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='80%' color='7CA3F3'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Fugiat aliquam dolorum harum architecto?</li>
-                                <li>Vitae quia obcaecati fugit eum?</li>
-                                <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
-                            </ul>
-                        </PhaseList>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='50%' color='32EDF0'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Fugiat aliquam dolorum harum architecto?</li>
+                                        <li>Vitae quia obcaecati fugit eum?</li>
+                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={fiftyPercentImg}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={eightyPercentImg}
-                        />
-                    </div>
-                </PhaseSection>
+                    </PhaseSection>
 
-                <PhaseSection title='Phase 4' color='EEBC43'>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='90%' color='EEBC43'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Quaerat nulla nemo molestias libero!</li>
-                                <li>Aspernatur repellat debitis odit impedit!</li>
-                                <li>Expedita facilis inventore ab et.</li>
-                            </ul>
-                        </PhaseList>
+                    <PhaseSection title='Phase 3' color='7CA3F3'>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='70%' color='7CA3F3'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Quaerat nulla nemo molestias libero!</li>
+                                        <li>Aspernatur repellat debitis odit impedit!</li>
+                                        <li>Expedita facilis inventore ab et.</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={seventyPercentImg}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={ninetyPercentImg}
-                        />
-                    </div>
-                    <div className="d-flex align-items-center pb-3">
-                        <div className="col-md-7">
-                        <PhaseList list='100%' color='EEBC43'>
-                            <ul className='ps-3'>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Fugiat aliquam dolorum harum architecto?</li>
-                                <li>Vitae quia obcaecati fugit eum?</li>
-                                <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
-                            </ul>
-                        </PhaseList>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='80%' color='7CA3F3'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Fugiat aliquam dolorum harum architecto?</li>
+                                        <li>Vitae quia obcaecati fugit eum?</li>
+                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={eightyPercentImg}
+                            />
                         </div>
-                        <PhaseListImage
-                            alt='Twenty Percent Image'
-                            src={hundredPercentImg}
-                        />
-                    </div>
-                </PhaseSection>
-            </Content>
-        </Container>
+                    </PhaseSection>
+
+                    <PhaseSection title='Phase 4' color='EEBC43'>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='90%' color='EEBC43'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Quaerat nulla nemo molestias libero!</li>
+                                        <li>Aspernatur repellat debitis odit impedit!</li>
+                                        <li>Expedita facilis inventore ab et.</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={ninetyPercentImg}
+                            />
+                        </div>
+                        <div className="d-flex align-items-center pb-3">
+                            <div className="col-md-7">
+                                <PhaseList list='100%' color='EEBC43'>
+                                    <ul className='ps-3'>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Fugiat aliquam dolorum harum architecto?</li>
+                                        <li>Vitae quia obcaecati fugit eum?</li>
+                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                    </ul>
+                                </PhaseList>
+                            </div>
+                            <PhaseListImage
+                                alt='Twenty Percent Image'
+                                src={hundredPercentImg}
+                            />
+                        </div>
+                    </PhaseSection>
+                </Content>
+            </Container>
+        </>
     )
 }
 
