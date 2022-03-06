@@ -17,8 +17,6 @@ import eightyPercentImg from '../public/roadmap/80-percent-image.webp'
 import ninetyPercentImg from '../public/roadmap/90-percent-image.webp'
 import hundredPercentImg from '../public/roadmap/100-percent-image.webp'
 
-import asd from '../public/1.png'
-
 const Content = styled.div`
     .container {
         @media (min-width: 992px) {
@@ -26,7 +24,6 @@ const Content = styled.div`
         }
     }
 `
-
 
 const Roadmap = () => {
     return (

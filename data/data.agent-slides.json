@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Agent 1",
+        "slide_src": "/slides/Char-1.webp"
+    },
+    {
+        "id": 2,
+        "name": "Agent 2",
+        "slide_src": "/slides/Char-2.webp"
+    },
+    {
+        "id": 3,
+        "name": "Agent 3",
+        "slide_src": "/slides/Char-3.webp"
+    },
+    {
+        "id": 4,
+        "name": "Agent 4",
+        "slide_src": "/slides/Char-4.webp"
+    },
+    {
+        "id": 5,
+        "name": "Agent 5",
+        "slide_src": "/slides/Char-5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Agent 6",
+        "slide_src": "/slides/Char-6.webp"
+    },
+    {
+        "id": 7,
+        "name": "Agent 7",
+        "slide_src": "/slides/Char-7.webp"
+    }
+]
