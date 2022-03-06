@@ -46,13 +46,20 @@ const HomeInside = ({ slides, }) => {
                         <p className='mb-0'>Anti-stigma society is a NFT movement that aims to raose mental health awareness. A communitiy-driven project focused on differently-abled</p>
                     </div>
                 </IntroWrapper>
-                <AgentsWrapper className='d-flex container py-5'>
-                    <div className='row'>
+                <AgentsWrapper className='container py-5'>
+                    <div className='d-flex row'>
                         <div className='col-4 order-md-last'>
-                            {/* <Image
-                        src={ }
-                    /> */}
-                            IMAGE HERE
+                            <Slider>
+                                {slides.map(slide => (
+                                    <Image
+                                        key={slide.id}
+                                        alt={slide.name}
+                                        src={slide.slide_src}
+                                        width='400'
+                                        height='400'
+                                    />
+                                ))}
+                            </Slider>
                         </div>
                         <div className='agents-wrapper__block col-8 order-md-first'>
                             <div className='agents-wrapper__content-text p-4 mb-3 rounded-3'>

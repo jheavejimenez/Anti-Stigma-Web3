@@ -31,7 +31,7 @@ const Roadmap = () => {
     return (
         <>
             <NextSeo
-                title="Agents"
+                title="Roadmap"
             />
 
             <Container>
