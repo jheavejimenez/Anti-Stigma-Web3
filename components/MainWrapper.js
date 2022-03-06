@@ -157,6 +157,30 @@ const GlobalStyle = createGlobalStyle`
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
+
+    .slick-dots {
+        li {
+            button {
+                &:before {
+                    opacity:1;
+                    font-size:20px;
+                    color:#fff;
+                }
+
+                &:hover:before {
+                    opacity:0.7;
+                    color:#596FC4;
+                }
+            }
+
+            &.slick-active {
+                button::before {
+                    opacity:1;
+                    color:#596FC4;
+                }
+            }
+        }
+    }
 `
 
 const MainWrapperBg = styled.main`

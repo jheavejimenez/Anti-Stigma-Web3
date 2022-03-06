@@ -52,50 +52,50 @@ const HeaderContiner = styled.header`
 
 
 const Header = () => {
-    const [openMenu, setOpenMenu] = useState(false)
-    const isMobile = useMediaQuery({ query: '(max-width:786px)' })
-    const router = useRouter()
-    const [currentAccount, setCurrentAccount] = useState('');
-  	const [network, setNetwork] = useState('');
+	const [openMenu, setOpenMenu] = useState(false)
+	const isMobile = useMediaQuery({ query: '(max-width:786px)' })
+	const router = useRouter()
+	const [currentAccount, setCurrentAccount] = useState('');
+	const [network, setNetwork] = useState('');
 
-    useEffect(() => {
-        setOpenMenu(false)
-    }, [router])
+	useEffect(() => {
+		setOpenMenu(false)
+	}, [router])
 
-    useEffect(() => {
-        if (isMobile) {
-            if (openMenu) {
-                document.body.classList.add('overflow-hidden')
-                return
-            }
+	useEffect(() => {
+		if (isMobile) {
+			if (openMenu) {
+				document.body.classList.add('overflow-hidden')
+				return
+			}
 
-            document.body.classList.remove('overflow-hidden')
-        }
-    }, [openMenu])
+			document.body.classList.remove('overflow-hidden')
+		}
+	}, [openMenu])
 
-    const toggleMenu = () => {
-        setOpenMenu(prevOpenMenu => !prevOpenMenu)
-    }
+	const toggleMenu = () => {
+		setOpenMenu(prevOpenMenu => !prevOpenMenu)
+	}
 
-    const connectWallet = async () => {
-    	try {
-      	const { ethereum } = window;
+	const connectWallet = async () => {
+		try {
+			const { ethereum } = window;
 
-      	if (!ethereum) {
-        	alert("Get MetaMask -> https://metamask.io/");
-        	return;
-      	}
-			
-      	const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-      
-      	console.log("Connected", accounts[0]);
-      	setCurrentAccount(accounts[0]);
-    	} catch (error) {
-      		console.log(error)
-    	}
-  	}
+			if (!ethereum) {
+				alert("Get MetaMask -> https://metamask.io/");
+				return;
+			}
 
-    const switchNetwork = async () => {
+			const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+			console.log("Connected", accounts[0]);
+			setCurrentAccount(accounts[0]);
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
+	const switchNetwork = async () => {
 		if (window.ethereum) {
 			try {
 				// Try to switch to the Mumbai testnet
@@ -109,14 +109,14 @@ const Header = () => {
 						await window.ethereum.request({
 							method: 'wallet_addEthereumChain',
 							params: [
-								{	
+								{
 									chainId: '0x13881',
 									chainName: 'Polygon Mumbai Testnet',
 									rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
 									nativeCurrency: {
-											name: "Mumbai Matic",
-											symbol: "MATIC",
-											decimals: 18
+										name: "Mumbai Matic",
+										symbol: "MATIC",
+										decimals: 18
 									},
 									blockExplorerUrls: ["https://mumbai.polygonscan.com/"]
 								},
@@ -131,10 +131,10 @@ const Header = () => {
 		} else {
 			// If window.ethereum is not found then MetaMask is not installed
 			alert('MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html');
-		} 
+		}
 	}
 
-    const checkIfWalletIsConnected = async () => {
+	const checkIfWalletIsConnected = async () => {
 		const { ethereum } = window;
 
 		if (!ethereum) {
@@ -158,18 +158,18 @@ const Header = () => {
 		setNetwork(networks[chainId]);
 
 		ethereum.on('chainChanged', handleChainChanged);
-		
+
 		// Reload the page when they change networks
 		function handleChainChanged(_chainId) {
 			window.location.reload();
 		}
 	};
 
-    useEffect(() => {
+	useEffect(() => {
 		checkIfWalletIsConnected();
 	}, []);
 
-    const renderSwitchNetwork = () =>{
+	const renderSwitchNetwork = () => {
 		if (network !== 'Polygon Mumbai Testnet') {
 			return (
 				<div className='header-container__button-wallet__body d-flex align-items-center'>
@@ -180,44 +180,44 @@ const Header = () => {
 			);
 		}
 	}
-    const renderNotConnectedContainer = () => (
+	const renderNotConnectedContainer = () => (
 		<div className='header-container__button-wallet__body d-flex align-items-center'>
-            <button className='button button-white text-end px-3 py-1' onClick={connectWallet} >Connect Wallet</button>
-        </div>
+			<button className='button button-white text-end px-3 py-1' onClick={connectWallet} >Connect Wallet</button>
+		</div>
 	);
 
-    return (
-        <HeaderContiner className='p-3 container position-relative'>
-            <Link href='/'>
-                <a className='header-container__logo'>
-                    <Image
-                        alt='Logo'
-                        src={WhiteLogo}
-                        width={70}
-                        height={70}
-                    />
-                </a>
-            </Link>
-            {router.pathname !== '/' &&
-                <div className='header-container__button-menu d-flex align-items-center mx-md-auto'>
-                    <button className='header-container__button text-center' onClick={toggleMenu}>
-                        <Image
-                            alt='Menu Icon'
-                            src={openMenu ? MenuOn : MenuOff}
-                            width={50}
-                            height={50}
-                        />
-                    </button>
-                </div>
-            }
-        {/* TODO: */}
-			{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
-            {!currentAccount && renderNotConnectedContainer()}
-            {currentAccount && renderSwitchNetwork()}
+	return (
+		<HeaderContiner className='p-3 container position-relative'>
+			<Link href='/'>
+				<a className='header-container__logo'>
+					<Image
+						alt='Logo'
+						src={WhiteLogo}
+						width={70}
+						height={70}
+					/>
+				</a>
+			</Link>
+			{router.pathname !== '/' &&
+				<div className='header-container__button-menu d-flex align-items-center mx-md-auto'>
+					<button className='header-container__button text-center' onClick={toggleMenu}>
+						<Image
+							alt='Menu Icon'
+							src={openMenu ? MenuOn : MenuOff}
+							width={50}
+							height={50}
+						/>
+					</button>
+				</div>
+			}
+			{/* TODO: */}
+			{currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p>}
+			{!currentAccount && renderNotConnectedContainer()}
+			{currentAccount && renderSwitchNetwork()}
 
-            <Navigation className={!openMenu ? '' : 'open'} />
-        </HeaderContiner>
-    )
+			<Navigation className={!openMenu ? '' : 'open'} />
+		</HeaderContiner>
+	)
 }
 
 export default Header

@@ -36,6 +36,17 @@ export default class MyDocument extends Document {
                         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
                         crossOrigin="anonymous"
                     />
+                    <link
+                        rel="stylesheet"
+                        type="text/css"
+                        charSet="UTF-8"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+                    />
+                    <link
+                        rel="stylesheet"
+                        type="text/css"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                    />
                 </Head>
                 <body>
                     <Main />
