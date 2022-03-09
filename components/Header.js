@@ -52,9 +52,9 @@ const HeaderContiner = styled.header`
 
 
 const Header = () => {
-	const [openMenu, setOpenMenu] = useState(false)
-	const isMobile = useMediaQuery({ query: '(max-width:786px)' })
 	const router = useRouter()
+	const isMobile = useMediaQuery({ query: '(max-width:786px)' })
+	const [openMenu, setOpenMenu] = useState(false)
 	const [currentAccount, setCurrentAccount] = useState('');
 	const [network, setNetwork] = useState('');
 
@@ -87,8 +87,6 @@ const Header = () => {
 			}
 
 			const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-
-			console.log("Connected", accounts[0]);
 			setCurrentAccount(accounts[0]);
 		} catch (error) {
 			console.log(error)
@@ -137,21 +135,13 @@ const Header = () => {
 	const checkIfWalletIsConnected = async () => {
 		const { ethereum } = window;
 
-		if (!ethereum) {
-			console.log('Make sure you have metamask!');
-			return;
-		} else {
-			console.log('We have the ethereum object', ethereum);
-		}
+		if (!ethereum) return // Checking if have metamask
 
 		const accounts = await ethereum.request({ method: 'eth_accounts' });
 
 		if (accounts.length !== 0) {
 			const account = accounts[0];
-			console.log('Found an authorized account:', account);
 			setCurrentAccount(account);
-		} else {
-			console.log('No authorized account found');
 		}
 
 		const chainId = await ethereum.request({ method: 'eth_chainId' });
@@ -169,22 +159,31 @@ const Header = () => {
 		checkIfWalletIsConnected();
 	}, []);
 
-	const renderSwitchNetwork = () => {
-		if (network !== 'Polygon Mumbai Testnet') {
+	const walletButtonCheck = () => {
+		if (currentAccount && network !== 'Polygon Mumbai Testnet') {
 			return (
-				<div className='header-container__button-wallet__body d-flex align-items-center'>
-					<h2>Please switch to Polygon Mumbai Testnet</h2>
+				<div className='text-end'>
 					{/* This button will call our switch network function */}
-					<button className='button button-white text-end px-3 py-1' onClick={switchNetwork}>Click here to switch</button>
+					<button className='button button-white px-3 py-1 mb-2' onClick={switchNetwork}>Click here to switch</button>
+					<h6 className='d-block'>Please switch to Polygon Mumbai Testnet</h6>
 				</div>
 			);
 		}
-	}
-	const renderNotConnectedContainer = () => (
-		<div className='header-container__button-wallet__body d-flex align-items-center'>
+
+		if (currentAccount) {
+			return (
+				<div className='text-end'>
+					{/* This button will call our switch network function */}
+					<button className='button button-white px-3 py-1 mb-2'>Connected</button>
+					<h6 className='d-block'>Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)}</h6>
+				</div>
+			)
+		}
+
+		return (
 			<button className='button button-white text-end px-3 py-1' onClick={connectWallet} >Connect Wallet</button>
-		</div>
-	);
+		)
+	}
 
 	return (
 		<HeaderContiner className='p-3 container position-relative'>
@@ -210,10 +209,9 @@ const Header = () => {
 					</button>
 				</div>
 			}
-			{/* TODO: */}
-			{currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p>}
-			{!currentAccount && renderNotConnectedContainer()}
-			{currentAccount && renderSwitchNetwork()}
+			<div className='header-container__button-wallet__body d-flex align-items-center'>
+				{walletButtonCheck()}
+			</div>
 
 			<Navigation className={!openMenu ? '' : 'open'} />
 		</HeaderContiner>
