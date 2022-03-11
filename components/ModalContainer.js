@@ -14,11 +14,13 @@ const ModalContainer = () => {
     return (
         <Modal
             footer={null}
+            closable={false}
             onCancel={onCancelModal}
             {...modalProps}
         >
             {/* <h5>{title ? title : 'Error'}</h5> */}
             <p>{message}</p>
+            <Button onClick={onCancelModal}>Ok</Button>
         </Modal>
     )
 }

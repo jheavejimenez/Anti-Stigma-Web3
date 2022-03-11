@@ -85,27 +85,21 @@ const Header = () => {
 			const { ethereum } = window;
 
 			if (!ethereum) {
-				// notification.error({
-				// 	message: 'Error',
-				// 	description: 'Get MetaMask -> https://metamask.io/',
-				// 	placement: 'bottomRight',
-				// });
-
-				// setModalAttr({
-				// 	visible:true,
-				// 	title: 'Error',
-				// 	message:'Get MetaMask -> https://metamask.io/',
-				// })
+				notification.error({
+					message: 'Error',
+					description: 'Get MetaMask -> https://metamask.io/',
+					placement: 'bottomRight',
+				});
+				return
 			}
 
 			const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 			setCurrentAccount(accounts[0]);
 		} catch (error) {
-			console.log(error)
-			// setModalAttr({
-			// 	visible:true,
-			// 	message: error,
-			// })
+			setModalAttr({
+				visible:true,
+				message: error,
+			})
 		}
 	}
 
@@ -137,26 +131,26 @@ const Header = () => {
 							],
 						});
 					} catch (error) {
-						// setModalAttr({
-						// 	visible:true,
-						// 	message: error,
-						// })
+						setModalAttr({
+							visible:true,
+							message: error,
+						})
 					}
 				}
 				
-				// setModalAttr({
-				// 	visible:true,
-				// 	message: error,
-				// })
+				setModalAttr({
+					visible:true,
+					message: error,
+				})
 			}
 			return
 		} 
 		
 		// If window.ethereum is not found then MetaMask is not installed
-		// setModalAttr({
-		// 	visible:true,
-		// 	message: 'MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html',
-		// })
+		setModalAttr({
+			visible:true,
+			message: 'MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html',
+		})
 	}
 
 	const checkIfWalletIsConnected = async () => {
@@ -190,7 +184,6 @@ const Header = () => {
 		if (currentAccount && network !== 'Polygon Mumbai Testnet') {
 			return (
 				<div className='text-end'>
-					{/* This button will call our switch network function */}
 					<button className='button button-white px-3 py-1 mb-2' onClick={switchNetwork}>Click here to switch</button>
 					<h6 className='d-block'>Please switch to Polygon Mumbai Testnet</h6>
 				</div>
@@ -200,7 +193,6 @@ const Header = () => {
 		if (currentAccount) {
 			return (
 				<div className='text-end'>
-					{/* This button will call our switch network function */}
 					<button className='button button-white px-3 py-1 mb-2'>Connected</button>
 					<h6 className='d-block'>Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)}</h6>
 				</div>
