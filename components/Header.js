@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react'
-import { useMediaQuery } from 'react-responsive'
-import { networks } from '../utils/networks'
+import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-
+import { useMediaQuery } from 'react-responsive'
+import { networks } from '../utils/networks'
 import styled from 'styled-components'
+import { Modal, Button, notification } from 'antd';
+
+import { AppContext } from '../pages/_app'
 
 import Navigation from './Navigation'
 import WhiteLogo from '../public/logo-white.png'
@@ -54,9 +56,10 @@ const HeaderContiner = styled.header`
 const Header = () => {
 	const router = useRouter()
 	const isMobile = useMediaQuery({ query: '(max-width:786px)' })
-	const [openMenu, setOpenMenu] = useState(false)
+	const [openMenu, setOpenMenu] = useState(false);
 	const [currentAccount, setCurrentAccount] = useState('');
 	const [network, setNetwork] = useState('');
+	const {setModalAttr} = useContext(AppContext);
 
 	useEffect(() => {
 		setOpenMenu(false)
@@ -82,14 +85,27 @@ const Header = () => {
 			const { ethereum } = window;
 
 			if (!ethereum) {
-				alert("Get MetaMask -> https://metamask.io/");
-				return;
+				// notification.error({
+				// 	message: 'Error',
+				// 	description: 'Get MetaMask -> https://metamask.io/',
+				// 	placement: 'bottomRight',
+				// });
+
+				// setModalAttr({
+				// 	visible:true,
+				// 	title: 'Error',
+				// 	message:'Get MetaMask -> https://metamask.io/',
+				// })
 			}
 
 			const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 			setCurrentAccount(accounts[0]);
 		} catch (error) {
 			console.log(error)
+			// setModalAttr({
+			// 	visible:true,
+			// 	message: error,
+			// })
 		}
 	}
 
@@ -121,15 +137,26 @@ const Header = () => {
 							],
 						});
 					} catch (error) {
-						console.log(error);
+						// setModalAttr({
+						// 	visible:true,
+						// 	message: error,
+						// })
 					}
 				}
-				console.log(error);
+				
+				// setModalAttr({
+				// 	visible:true,
+				// 	message: error,
+				// })
 			}
-		} else {
-			// If window.ethereum is not found then MetaMask is not installed
-			alert('MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html');
-		}
+			return
+		} 
+		
+		// If window.ethereum is not found then MetaMask is not installed
+		// setModalAttr({
+		// 	visible:true,
+		// 	message: 'MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html',
+		// })
 	}
 
 	const checkIfWalletIsConnected = async () => {
