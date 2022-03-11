@@ -83,7 +83,6 @@ const Header = () => {
 	const connectWallet = async () => {
 		try {
 			const { ethereum } = window;
-
 			if (!ethereum) {
 				notification.error({
 					message: 'Error',
@@ -92,7 +91,7 @@ const Header = () => {
 				});
 				return
 			}
-
+			
 			const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 			setCurrentAccount(accounts[0]);
 		} catch (error) {
@@ -193,7 +192,7 @@ const Header = () => {
 		if (currentAccount) {
 			return (
 				<div className='text-end'>
-					<button className='button button-white px-3 py-1 mb-2'>Connected</button>
+					<button disabled className='button button-white px-3 py-1 mb-2'>Connected</button>
 					<h6 className='d-block'>Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)}</h6>
 				</div>
 			)

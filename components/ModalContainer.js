@@ -1,9 +1,22 @@
-import { useState, useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { Modal, Button, } from 'antd';
 import { AppContext } from '../pages/_app';
+import styled from 'styled-components';
+
+const Wrapper = styled(Modal)`
+    text-align:center;
+
+    h5 {
+        color:var(--black);
+        font-weight:700;
+    }
+
+    p, button {
+        font-size:.9375rem;
+    }
+`
 
 const ModalContainer = () => {
-    // const [isModalVisible, setIsModalVisible] = useState(false);
     const { modalAttr, setModalAttr } = useContext(AppContext);
     const { title, message, ...modalProps } = modalAttr
 
@@ -12,16 +25,17 @@ const ModalContainer = () => {
     }
 
     return (
-        <Modal
+        <Wrapper
             footer={null}
             closable={false}
             onCancel={onCancelModal}
+            width={400}
             {...modalProps}
         >
-            {/* <h5>{title ? title : 'Error'}</h5> */}
+            <h5>{title ? title : 'Error'}</h5>
             <p>{message}</p>
-            <Button onClick={onCancelModal}>Ok</Button>
-        </Modal>
+            <Button onClick={onCancelModal} type='primary'>Okay</Button>
+        </Wrapper>
     )
 }
 

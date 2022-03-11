@@ -2,8 +2,9 @@
 import { useState, createContext, } from "react";
 import Script from "next/script"
 import { DefaultSeo } from 'next-seo'
-import 'antd/dist/antd.css';
+import "../styles/antd.less";
 
+import GlobalStyle from '../styles/GlobalStyle';
 import MainWrapper from '../components/MainWrapper'
 import Modal from '../components/ModalContainer'
 
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps, }) {
 
             <AppContext.Provider value={{ modalAttr, setModalAttr, }}>
                 <MainWrapper>
+                    <GlobalStyle />
                     <Component {...pageProps} />
                     <Modal />
                 </MainWrapper>
