@@ -34,21 +34,11 @@ const Agents = ({ agents }) => {
                 <div className='container d-flex pt-5'>
                     <div className='col-md-7'>
                         <TextContainer spacing={4} inBg={true}>
-                            <h2>Rarity</h2>
-                            <p>
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                            </p>
+                            <h2>ANTI-STIGMA</h2>
+                            <p>THE PROJECT WILL HAVE 10,000 UNIQUE CHARACTERS CALLED "ANTI-STIGMAS" BOTH CODE-GENERATED AND CUSTOM-MADE.</p>
                         </TextContainer>
                         <TextContainer spacing={4}>
-                            <p>
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                            </p>
+                            <p>THE COLLECTION HAS 7 CHARACTERS WHERE EACH CHARACTER REPRESENTS MENTAL STRUGGLE.</p>
                         </TextContainer>
                     </div>
                     <div className='col-md-5'>
@@ -89,10 +79,12 @@ const Agents = ({ agents }) => {
                         <div className='col-md-6'>
                             <h2>Rarity</h2>
                             <p>
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
-                                Sed fermentum egestas <br />
+                                5,250 COMMON ANTI-STIGMAS <br />
+                                2,450 RARE ANTI-STIGMAS <br />
+                                1,050 SUPER RARE ANTI-STIGMAS <br />
+                                413 EVENT-BASED ANTI-STIGMAS <br />
+                                420 MONTHLY HOLIDAY ANTI-STIGMAS <br />
+                                413 COLLABORATION ANTI-STIGMAS
                             </p>
                         </div>
                         <div className='d-flex justify-content-center col-md-6'>
@@ -105,14 +97,10 @@ const Agents = ({ agents }) => {
                         </div>
                     </RarityContainer>
                     <TextContainer spacing={4} inBg={true}>
-                        <p>
-                            Sed fermentum egestas massa vitae porta. Vestibulum ut velit eleifend, scelerisque libero sed, pulvinar augue. Ut luctus arcu ut pellentesque tincidunt. Praesent tempor bibendum quam, vel aliquam leo aliquet vel. Nam vitae nibh mattis, tincidunt orci nec, aliquam sapien. Nunc commodo arcu nec tellus ullamcorper, et fringilla quam sodales. Morbi commodo sapien nec placerat porttitor. Nulla facilisi.
-                        </p>
+                        <p>SPECIAL CLASS ANTI-STIGMAS SUCH AS EVENT, HOLIDAY, COLLAB BASED ARE AVAILABLE ON OUR OPENSEA. ALPHA CLASS ANTI-STIGMAS THAT ARE COMMON, RARE, AND SUPER RARE WILL BE AVAILABLE ON OUR MINTING PAGE.</p>
                     </TextContainer>
                     <TextContainer spacing={4}>
-                        <p>
-                            Sed fermentum egestas massa vitae porta. Vestibulum ut velit eleifend, scelerisque libero sed, pulvinar augue. Ut luctus arcu ut pellentesque tincidunt. Praesent tempor bibendum quam, vel aliquam leo aliquet vel. Nam vitae nibh mattis, tincidunt orci nec, aliquam sapien. Nunc commodo arcu nec tellus ullamcorper, et fringilla quam sodales. Morbi commodo sapien nec placerat porttitor. Nulla facilisi.
-                        </p>
+                        <p>BESIDES THE DIFFERENT PARTS OF THE ANTI-STIGMAS, RARITIES CAN ALSO BE DETERMINED BY THEIR BACKGROUND.</p>
                     </TextContainer>
                     <div className='text-center pb-5'>
                         <Image

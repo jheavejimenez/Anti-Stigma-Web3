@@ -43,7 +43,7 @@ const HomeInside = ({ slides, }) => {
                 <HeroBanner />
                 <IntroWrapper className='container p-4 my-3'>
                     <div className='intro-wrapper__content mx-auto text-center p-3'>
-                        <p className='mb-0'>Anti-stigma society is a NFT movement that aims to raose mental health awareness. A communitiy-driven project focused on differently-abled</p>
+                        <p className='mb-0'>Anti-stigma society is a NFT movement that aims to rose mental health awareness. A communitiy-driven project focused on differently-abled</p>
                     </div>
                 </IntroWrapper>
                 <AgentsWrapper className='container py-5'>

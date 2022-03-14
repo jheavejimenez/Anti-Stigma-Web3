@@ -32,11 +32,14 @@ const MenuItem = styled.li`
     }
 `;
 
-const NavigationItem = ({ icon, link, name, }) => (
+const NavigationItem = ({ icon, link, name, target, }) => (
     <MenuItem>
         {link ?
             <Link href={link}>
-                <a className='d-flex align-items-center py-1'>
+                <a 
+                    className='d-flex align-items-center py-1'
+                    target={target ? '_blank' : '_self'}
+                >
                     {icon &&
                         <div className='menu-item__icon-wrap position-relative'>
                             <Image className='pe-2'

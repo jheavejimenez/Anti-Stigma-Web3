@@ -32,7 +32,7 @@ export default createGlobalStyle`
     }
 
     * {
-        outline: none;
+        outline: none!important;
         line-height: 1.4;
     }
 
@@ -137,7 +137,7 @@ export default createGlobalStyle`
     }
 
     .open {
-        visibility:visible;
+        visibility:visible!important;
         animation: .4s ${fadeInAnimation} ease-in-out;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
