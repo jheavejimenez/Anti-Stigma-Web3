@@ -14,10 +14,12 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     bool public saleOpen = false;
     bool public presaleOpen = false;
-    bool public reveal = false; // reveal is true when presale is over and sale is open 
+    bool public reveal = false; // reveal is true when presale is over and sale is open
+
+    address[] public whitelistedAddresses;
 
     string public baseURI = "";
-    string public baseExtension = "";
+    string public baseExtension = ".json";
   
     uint256 public constant ANTISTIGMASOCIETY_MAX = 8750;
     uint256 public constant MAX_MINT_TX = 10;
@@ -53,7 +55,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 		_minter(msg.sender, amount);
     }
     
-    function mintForAddress(address _receiver, uint256 amount) public onlyOwner {
+    function ownerClaim(address _receiver, uint256 amount) public onlyOwner {
         _minter(_receiver, amount);
     }
   
@@ -85,6 +87,11 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId),"ERC721Metadata: URI query for nonexistent token");
         return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), baseExtension)) : "";
+    }
+
+    function whitelistUsers(address[] calldata _users) public onlyOwner {
+        delete whitelistedAddresses;
+        whitelistedAddresses = _users;
     }
 
     function withdraw() public onlyOwner {
