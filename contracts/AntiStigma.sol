@@ -22,6 +22,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     string public baseExtension = ".json";
   
     uint256 public constant ANTISTIGMASOCIETY_MAX = 8750;
+    uint256 public constant OWNER_MAX_CLAIM = 750;
     uint256 public constant MAX_MINT_TX = 10;
     uint256 public wlMintPrice = 6 ether;
     uint256 public publicMintPrice = 12 ether;
@@ -56,6 +57,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     }
     
     function ownerClaim(address _receiver, uint256 amount) public onlyOwner {
+        require((supply.current() < OWNER_MAX_CLAIM) && (supply.current() < MAX_SUPPLY), "Max supply exceeded!");
         _minter(_receiver, amount);
     }
   
