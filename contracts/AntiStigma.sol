@@ -13,8 +13,8 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     Counters.Counter private supply;
 
     bool public saleOpen = false;
-    bool public presaleOpen = false;
     bool public reveal = false; // reveal is true when presale is over and sale is open
+    bool public onlyWhitelisted = true;
 
     address[] public whitelistedAddresses;
 
@@ -30,34 +30,25 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
 
     constructor() ERC721("Anti-Stigma Society - Alpha Class", "AntiStigmaSociety") {}
 
+    modifier mintCompliance(uint256 _mintAmount) {
+        require(_mintAmount > 0 && _mintAmount <= MAX_MINT_TX, "Invalid mint amount!");
+        require(supply.current() + _mintAmount <= maxSupply, "Max supply exceeded!");
+        _;
+    }
+
     function totalSupply() public view returns (uint256) {
         return supply.current();
     }
 
-    function toggleSale() public onlyOwner {
-        saleOpen = !saleOpen;
-    }
-
-    function togglePresale() public onlyOwner {
-        presaleOpen = !presaleOpen;
-    }
-
-    function toggleReveal() public onlyOwner {
-        reveal = true;
-            }
-
-    function whitelistAddress(address[] memory who, uint256 amount) public onlyOwner {
-        //TODO add whitelist logic
-    }
-
     function mint(uint256 amount) public payable nonReentrant {
-        require(presaleOpen == true, 'presale is not open');
-		require(msg.value >= wlMintPrice, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
+        require(saleOpen == true, 'Minting is not open');
+        require(supply.current() < 8000, "invalid claim");
+		require(msg.value >= wlMintPrice * amount, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
 		_minter(msg.sender, amount);
     }
     
     function ownerClaim(address _receiver, uint256 amount) public onlyOwner {
-        require((supply.current() < OWNER_MAX_CLAIM) && (supply.current() < MAX_SUPPLY), "Max supply exceeded!");
+        require((supply.current() < OWNER_MAX_CLAIM) && (supply.current() < ANTISTIGMASOCIETY_MAX), "Max supply exceeded!");
         _minter(_receiver, amount);
     }
   
@@ -89,6 +80,14 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId),"ERC721Metadata: URI query for nonexistent token");
         return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), baseExtension)) : "";
+    }
+
+    function toggleSale() public onlyOwner {
+        saleOpen = !saleOpen;
+    }
+
+    function toggleReveal() public onlyOwner {
+        reveal = true;
     }
 
     function whitelistUsers(address[] calldata _users) public onlyOwner {
