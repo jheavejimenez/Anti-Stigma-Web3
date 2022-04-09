@@ -14,8 +14,7 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     Counters.Counter private supply;
 
     bool public saleOpen = false;
-    bool public reveal = false; // reveal is true when presale is over and sale is open
-    bool public whitelistMint = true;
+    bool public reveal = false;
 
     address[] public whitelistedAddresses;
 
@@ -43,15 +42,12 @@ contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     }
 
     function mint(uint256 _amount) public payable mintCondition(_amount) nonReentrant {
-        require(saleOpen == true, 'Minting is not open');
-        if (whitelistMint == true) {
-            require(isWhitelisted(msg.sender), "this address is not whitelisted");
-            //TODO: create isWhitelisted logic
+        require(saleOpen == true, "Minting is not open");
+        if (isWhitelisted(msg.sender)) {
             require(msg.value >= wlMintPrice * _amount, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
-            _minter(msg.sender, _amount);
+        } else {
+            require(msg.value >= publicMintPrice * _amount, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
         }
-        require(msg.value >= publicMintPrice * _amount, "Anti-Stigma Society: Amount of MATIC sent is incorrect.");
-        //TODO: refractor this to error()
         _minter(msg.sender, _amount);
     }
 
