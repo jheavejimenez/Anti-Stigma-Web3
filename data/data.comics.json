@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Comic #001",
+        "url": "/comics/Comic-001.webp"
+    },
+    {
+        "id": 2,
+        "name": "Comic #002",
+        "url": "/comics/Comic-002.webp"
+    }
+]

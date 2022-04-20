@@ -38,7 +38,7 @@ const Roadmap = () => {
                 <Content>
                     <div className="d-flex justify-content-center align-items-center">
                         <Image
-                            alt='Roadmap Image'
+                            alt='Roadmap Header'
                             src={RoadmapImage}
                             width={230}
                             height={230}
@@ -50,10 +50,10 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='0%' color='7FAE98'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Quaerat nulla nemo molestias libero!</li>
-                                        <li>Aspernatur repellat debitis odit impedit!</li>
-                                        <li>Expedita facilis inventore ab et.</li>
+                                        <li>PFP PRODUCTION</li>
+                                        <li>WEBSITE/DAPP</li>
+                                        <li>WHITELIST MECHANICS</li>
+                                        <li>COLLABORATIONS</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -66,10 +66,9 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='10%' color='7FAE98'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Fugiat aliquam dolorum harum architecto?</li>
-                                        <li>Vitae quia obcaecati fugit eum?</li>
-                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                        <li>THE AS FOUNDATION</li>
+                                        <li>CONTESTS AND COMMUNITY GAMES</li>
+                                        <li>4 FRAME COMIC STRIPS</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -84,8 +83,8 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='20%' color='7FAE98'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Expedita vel fugiat quae aspernatur?</li>
+                                        <li>STAR AGENTS (VIP)</li>
+                                        <li>RECOGNITION DAY</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -101,10 +100,9 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='40%' color='32EDF0'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Quaerat nulla nemo molestias libero!</li>
-                                        <li>Aspernatur repellat debitis odit impedit!</li>
-                                        <li>Expedita facilis inventore ab et.</li>
+                                        <li>ASF YOUTUBE CHANNEL</li>
+                                        <li>ASF OPERATION TEAM</li>
+                                        <li>ASF PRODUCTION TEAM</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -136,10 +134,7 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='70%' color='7CA3F3'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Quaerat nulla nemo molestias libero!</li>
-                                        <li>Aspernatur repellat debitis odit impedit!</li>
-                                        <li>Expedita facilis inventore ab et.</li>
+                                        <li>ANTI-STIGMA DAY ON METAVERSE</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -152,10 +147,7 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='80%' color='7CA3F3'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Fugiat aliquam dolorum harum architecto?</li>
-                                        <li>Vitae quia obcaecati fugit eum?</li>
-                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                        <li>NEXUS EVENT</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -171,10 +163,7 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='90%' color='EEBC43'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Quaerat nulla nemo molestias libero!</li>
-                                        <li>Aspernatur repellat debitis odit impedit!</li>
-                                        <li>Expedita facilis inventore ab et.</li>
+                                        <li>EVENT LAUNCH</li>
                                     </ul>
                                 </PhaseList>
                             </div>
@@ -187,10 +176,8 @@ const Roadmap = () => {
                             <div className="col-md-7">
                                 <PhaseList list='100%' color='EEBC43'>
                                     <ul className='ps-3'>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Fugiat aliquam dolorum harum architecto?</li>
-                                        <li>Vitae quia obcaecati fugit eum?</li>
-                                        <li>Cupiditate deleniti aperiam aliquam? Laborum?</li>
+                                        <li>ANTI-STIGMA SOCIETY EXPANSION</li>
+                                        <li>10K HOLDER GIVEAWAY</li>
                                     </ul>
                                 </PhaseList>
                             </div>

@@ -57,7 +57,7 @@ const Navigation = ({ className }) => {
                 <NavigationItem
                     icon={AgentIcon}
                     link='/agents'
-                    name='Agents'
+                    name='Anti-Stigmas'
                 />
                 <NavigationItem
                     icon={RoadMapIcon}
@@ -66,7 +66,7 @@ const Navigation = ({ className }) => {
                 />
                 <NavigationItem
                     icon={ComicsIcon}
-                    // link='#'
+                    link='/comics'
                     name='Comics'
                 />
             </NavigationWrapper>
@@ -80,7 +80,7 @@ const Navigation = ({ className }) => {
                 <NavigationItem
                     icon={TheAgencyIcon}
                     // link='#'
-                    name='The A-Gen-Z'
+                    name='The Society'
                 />
                 <NavigationItem
                     icon={AsFoundationIcon}
