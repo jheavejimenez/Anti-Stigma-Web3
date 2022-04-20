@@ -42,9 +42,8 @@ const Comics = ({ comics }) => {
                     </div>
 
                     {comics.map((comic, index) => (
-                        <div className="d-block text-center pb-5">
+                        <div className="d-block text-center pb-5" key={`comic-${index}`}>
                             <Image
-                                key={`comic-${index}`}
                                 alt={comic.name}
                                 src={comic.url}
                                 width={600}
