@@ -35,7 +35,7 @@ const Agents = ({ agents }) => {
                     <div className='col-md-7'>
                         <TextContainer spacing={4} inBg={true}>
                             <h2>ANTI-STIGMA</h2>
-                            <p>THE PROJECT WILL HAVE 10,000 UNIQUE CHARACTERS CALLED "ANTI-STIGMAS" BOTH CODE-GENERATED AND CUSTOM-MADE.</p>
+                            <p>THE PROJECT WILL HAVE 10,000 UNIQUE CHARACTERS CALLED &quot;ANTI-STIGMAS&quot; BOTH CODE-GENERATED AND CUSTOM-MADE.</p>
                         </TextContainer>
                         <TextContainer spacing={4}>
                             <p>THE COLLECTION HAS 7 CHARACTERS WHERE EACH CHARACTER REPRESENTS MENTAL STRUGGLE.</p>
