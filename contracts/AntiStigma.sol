@@ -6,6 +6,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+// TODO: Refactor smartcontract
 
 contract AntiStigmaSociety is ERC721, Ownable, ReentrancyGuard {
     using Strings for uint256;
