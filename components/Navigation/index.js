@@ -97,7 +97,7 @@ const Navigation = ({ className }) => {
             <NavigationWrapper title='And more...'>
                 <NavigationItem
                     icon={MintIcon}
-                    // link='#'
+                    link='/mint'
                     name='Mint'
                 />
                 <NavigationItem
