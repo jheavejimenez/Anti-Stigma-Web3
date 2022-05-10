@@ -34,7 +34,9 @@ const MintSlider = styled(Slider)`
 `
 
 const mint = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [amount, setAmount] = useState(1)
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [maticAmount, setmaticAmount] = useState(4)
 
     const getAmount = value => {
